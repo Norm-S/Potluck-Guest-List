@@ -16,13 +16,17 @@ addGuestButton.addEventListener("click", function () {
   //   console.log(guest);
 
   if (guest !== "") {
-    const listItem = document.createElement("li");
-    listItem.innerText = guest;
-    guestList.append(listItem);
+    addToList(guest);
     clearInput();
   }
 });
 
 const clearInput = function () {
   guestInput.value = "";
+};
+
+const addToList = function (guest) {
+  const listItem = document.createElement("li");
+  listItem.innerText = guest;
+  guestList.append(listItem);
 };
