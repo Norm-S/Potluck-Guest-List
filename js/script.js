@@ -63,7 +63,7 @@ const assignItems = function () {
     "quiche",
   ];
 
-  const allGuests = document.querySelectorAll(".guest-list");
+  const allGuests = document.querySelectorAll(".guest-list li");
 
   for (let guest of allGuests) {
     let randomPotluckIndex = Math.floor(Math.random() * potluckItems.length);
@@ -75,3 +75,7 @@ const assignItems = function () {
     assignedItems.append(listItem);
   }
 };
+
+assignButton.addEventListener("click", function () {
+  assignItems();
+});
