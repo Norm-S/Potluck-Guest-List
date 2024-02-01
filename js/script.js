@@ -17,8 +17,8 @@ addGuestButton.addEventListener("click", function () {
 
   if (guest !== "") {
     addToList(guest);
-    clearInput();
     updateGuestCount();
+    clearInput();
   }
 });
 
@@ -38,7 +38,8 @@ const updateGuestCount = function () {
 
   if (guests.length == 8) {
     addGuestButton.classList.add("hide");
-    guestInput.classlist.add("hide");
+    guestInput.classList.add("hide");
     guestInputLabel.classList.add("hide");
+    guestFull.classList.remove("hide");
   }
 };
